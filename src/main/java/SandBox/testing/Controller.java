@@ -13,9 +13,12 @@ public class Controller {
 		int numberOfCrawlers = 1;
 
 		CrawlConfig config = new CrawlConfig();
+		
 		config.setCrawlStorageFolder(crawlStorageFolder);
 		config.setMaxDepthOfCrawling(0);
-
+		config.setIncludeBinaryContentInCrawling(Boolean.TRUE);
+		config.setConnectionTimeout(100000);
+		
 		/*
 		 * Instantiate the controller for this crawl.
 		 */
@@ -32,6 +35,23 @@ public class Controller {
 		 * which are found in these pages
 		 */
 		controller.addSeed("https://itunes.apple.com/sg/rss/topfreeipadapplications/limit=400/genre=7003/xml");
+		controller.addSeed("https://itunes.apple.com/sg/rss/toppaidapplications/limit=400/xml");
+		controller.addSeed("https://itunes.apple.com/sg/rss/topfreeapplications/limit=400/genre=6023/xml");
+		controller.addSeed("https://itunes.apple.com/sg/rss/topgrossingapplications/limit=400/xml");
+		controller.addSeed("https://itunes.apple.com/sg/rss/topfreeapplications/limit=400/genre=6016/xml");
+		controller.addSeed("https://itunes.apple.com/sg/rss/toppaidapplications/limit=400/genre=6016/xml");
+		controller.addSeed("https://itunes.apple.com/sg/rss/topfreeapplications/limit=400/genre=6016/xml");
+		controller.addSeed("https://itunes.apple.com/sg/rss/topgrossingapplications/limit=400/genre=6016/xml");
+		
+		controller.addSeed("https://itunes.apple.com/us/rss/topfreeipadapplications/limit=400/genre=7003/xml");
+		controller.addSeed("https://itunes.apple.com/us/rss/toppaidapplications/limit=400/xml");
+		controller.addSeed("https://itunes.apple.com/us/rss/topfreeapplications/limit=400/genre=6023/xml");
+		controller.addSeed("https://itunes.apple.com/us/rss/topgrossingapplications/limit=400/xml");
+		controller.addSeed("https://itunes.apple.com/us/rss/topfreeapplications/limit=400/genre=6016/xml");
+		controller.addSeed("https://itunes.apple.com/us/rss/toppaidapplications/limit=400/genre=6016/xml");
+		controller.addSeed("https://itunes.apple.com/us/rss/topfreeapplications/limit=400/genre=6016/xml");
+		controller.addSeed("https://itunes.apple.com/us/rss/topgrossingapplications/limit=400/genre=6016/xml");
+		
 		//controller.addSeed("http://www.ics.uci.edu/~lopes/");
 		//controller.addSeed("http://www.ics.uci.edhttp://itunes.apple.com/us/rss//");
 
